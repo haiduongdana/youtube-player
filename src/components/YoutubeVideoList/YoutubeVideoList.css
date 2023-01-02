@@ -1,0 +1,68 @@
+.youtube-videos-title {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.youtube-video-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.youtube-video-card {
+  display: flex;
+  margin-bottom: 9px;
+}
+
+.youtube-video-card__info {
+  margin-top: 8px;
+}
+
+.youtube-video-card__thumbnail-container {
+  margin-right: 14px;
+  width: 177px;
+  height: 89px;
+  cursor: pointer;
+}
+
+.youtube-video-card__thumbnail-img {
+  width: 100%;
+  height: 100%;
+}
+
+.youtube-video-card__title {
+  color: #FFFFFF;
+  font-weight: 600px;
+  line-height: 17px;
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.youtube-video-card__duration-title {
+  display: block;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 12px;
+  margin-bottom: 2px;
+}
+
+.youtube-video-card__duration-time {
+  display: block;
+  font-size: 10px;
+  color: #FFFFFF;
+  line-height: 12px;
+  margin-bottom: 2px;
+}
+
+.youtube-video-card__played {
+  background: #6185BB;
+  border-radius: 3px;
+  font-weight: 700;
+  line-height: 7px;
+  font-size: 6px;
+  padding: 4px 7px;
+  color: #FFFFFF;
+}

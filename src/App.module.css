@@ -1,0 +1,9 @@
+html{
+  font-size: 16px;
+}
+
+.app {
+  background: #1E1E1E;
+  min-height: 100vh;
+  padding: 26px 30px;
+}
