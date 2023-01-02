@@ -7,8 +7,7 @@ import { Suspense, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { routes } from "./routes";
 import { getRecommendations } from "./services";
-import { addVideoes } from "./redux/features/youtube-video/youtubeVideoSlice";
-import { mockVideos } from "./dataMock";
+import { addVideoes, YoutubeVideo } from "./redux/features/youtube-video/youtubeVideoSlice";
 import Loading from "./components/Loading/Loading";
 import A from "./App.module.css";
 
@@ -20,16 +19,15 @@ function App() {
 			if (response.error) {
 				return;
 			}
-			// const videosFiltered = response.recommendationsList.filter((info) => info.position >= 0 && info.position < 100) as any[];
-			// const videoMapped: YoutubeVideo[] = videosFiltered.map(v => ({
-			// 	id: v.metadata!.sid,
-			// 	title: v.metadata!.title,
-			// 	duration: v.metadata!.duration,
-			// 	thumbnailUrl: v.metadata!.thumbnailUrl,
-			// 	played: false
-			// }));
-			// dispatch(addVideoes(videoMapped))
-			dispatch(addVideoes(mockVideos))
+			const videosFiltered = response.recommendationsList.filter((info) => info.position >= 0 && info.position < 100) as any[];
+			const videoMapped: YoutubeVideo[] = videosFiltered.map(v => ({
+				id: v.metadata!.sid,
+				title: v.metadata!.title,
+				duration: v.metadata!.duration,
+				thumbnailUrl: v.metadata!.thumbnailUrl,
+				played: false
+			}));
+			dispatch(addVideoes(videoMapped))
 		});
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
